@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Випадкове зображення</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
+    img {
+      max-width: 95%;
+      max-height: 80vh;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    a {
+      margin-top: 20px;
+      color: #696969;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>skaber0</h1>
+  <img id="randomImage" src="" alt="Робота">
+  <a href="https://instagram.com/skaber0" target="_blank">my Instagram</a>
+
+  <script>
+    const images = [
+      "images/20250728_213843.png",
+      "images/20250728_213938.png",
+      "images/20250728_215216.png",
+      "images/20250728_215343.png",
+    ];
+
+    function getRandomImage() {
+      return images[Math.floor(Math.random() * images.length)];
+    }
+
+    const imgElement = document.getElementById("randomImage");
+    imgElement.src = getRandomImage();
+  </script>
+</body>
+</html>
